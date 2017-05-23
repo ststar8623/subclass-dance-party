@@ -21,6 +21,8 @@
 var MakeBlinkyDancer = function(top, left, timeBetweenSteps) {
   this.oldStep = Dancer.prototype.step;
   Dancer.call(this, top, left, timeBetweenSteps);
+  this.$node = $('<img src="./img/blinkyDancer.png" alt="breakDancer" class="">');
+  this.setPosition(top, left);
 };
 
 MakeBlinkyDancer.prototype = Object.create(Dancer.prototype);
@@ -28,7 +30,7 @@ MakeBlinkyDancer.prototype.constructor = MakeBlinkyDancer;
 
 MakeBlinkyDancer.prototype.step = function() {
   this.oldStep();
-  this.$node.addClass('dancer2 animated infinite flash');
+  this.$node.addClass('dancer').toggle();
 };
 
 
