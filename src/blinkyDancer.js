@@ -28,7 +28,7 @@ MakeBlinkyDancer.prototype.constructor = MakeBlinkyDancer;
 
 MakeBlinkyDancer.prototype.step = function() {
   this.oldStep();
-  this.$node.toggle();
+  this.$node.addClass('dancer2 animated infinite flash');
 };
 
 
