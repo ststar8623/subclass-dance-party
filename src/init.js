@@ -53,6 +53,14 @@ $(document).ready(function() {
       dancer.style.left = dancersPosition * i + 'px';
     }
   });
+
+  $('img').click(function() {
+    $('this').mousemove();
+  });
+
+  $('img').mousemove(function(event) {
+    $(this).css({"left": event.pageX, "top": event.pageY });
+  });
 });
 
 
