@@ -60,4 +60,3 @@ Dancer.prototype.setPosition = function(top, left) {
 
 
 
-

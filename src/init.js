@@ -47,10 +47,20 @@ $(document).ready(function() {
     var screenWidth = screen.width;
     var dancers = $('img');
     var dancersPosition = screenWidth / dancers.length;
+    window.dancers.push(dancers);
     for (let i = 0; i < dancers.length; i++) {
       let dancer = dancers[i];
       dancer.style.top = '300px';
       dancer.style.left = dancersPosition * i + 'px';
+    }
+  });
+
+  $('.random').on('click', function(event) {
+    var dancers = $('img');
+    for (let i = 0; i < dancers.length; i++) {
+      let dancer = dancers[i];
+      dancer.style.top = $('body').height() * Math.random() + 'px';
+      dancer.style.left = $('body').width() * Math.random() + 'px';
     }
   });
 });
